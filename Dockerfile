@@ -3,7 +3,7 @@ FROM asciidoctor/docker-asciidoctor
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
  && apk add --no-cache libreoffice
 
-RUN apk add --no-cache msttcorefonts-installer fontconfig
+RUN apk add --no-cache msttcorefonts-installer fontconfig rsync
 RUN update-ms-fonts
 
 # Google fonts
